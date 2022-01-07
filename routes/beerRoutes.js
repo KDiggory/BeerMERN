@@ -11,14 +11,14 @@ router.post('/create', (req, res) => {
     console.log(req.body);
     const beer = new Beer(req.body);
     beer.save().then((result) => {
-        res.status(201).send(`${result.name} beer created sucessfully`);
+        res.status(201).send(`${result.name} beer created successfully`);
     })
 });
 
 // Update
 router.put('/update/:id', (req, res) => {
 
-    res.status(202).send(`beer ${req.params.id} updated sucessfully`);
+    res.status(202).send(`beer ${req.params.id} updated successfully`);
 });
 
 // Read All
